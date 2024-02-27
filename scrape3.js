@@ -6,7 +6,7 @@ const needle = require("needle");
 // To set environment variables on macOS or Linux, run the export command below from the terminal:
 // export BEARER_TOKEN='YOUR-TOKEN'
 
-const token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+const token = '';
 const id = "2244994945";
 
 const endpointURL = `https://api.twitter.com/2/users/${id}/owned_lists`;
