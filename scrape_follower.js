@@ -156,7 +156,7 @@ app.get("/followers/:tid", async(req, res) => {
     try {
         const {tid} = req.params;
         const url = `https://api.twitter.com/2/users/${tid}/followers`;
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
 
         var uusers = await gettFollowers(url, bearerToken);
 
