@@ -162,7 +162,7 @@ app.get("/retweets/:tid", async(req, res) => {
 
       const endpointURL = `https://api.twitter.com/2/tweets/${tid}/retweeted_by`;
 
-      const token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+      const token = '';
       
       var uusers = await getretweets(token, endpointURL);
       let data_length = uusers.length;
