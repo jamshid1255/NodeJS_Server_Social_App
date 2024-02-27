@@ -30,7 +30,7 @@ app.use(express.json());
 // this is the ID for @TwitterDev
 const userId = 2244994945;
 const url = `https://api.twitter.com/2/users/${userId}/following`;
-const bearerToken = "AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U";
+const bearerToken = "";
 
 const getFollowing = async () => {
     let users = [];
@@ -158,7 +158,7 @@ app.get("/followings/:tid", async(req, res) => {
         const {tid} = req.params;
         // const userId = 2244994945;
         const url = `https://api.twitter.com/2/users/${tid}/following`;
-        const bearerToken = "AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U";
+        const bearerToken = "";
 
         var uusers = await gettFollowing(url, bearerToken);
 
