@@ -28,7 +28,7 @@ app.use(express.json());
 //     ]
 //   });
 
-// const token = "AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U";
+// const token = "";
 
 // const endpointURL = "https://api.twitter.com/2/users/by?usernames="
 
@@ -121,7 +121,7 @@ app.get("/get_user/:uname", async(req, res) => {
 
         const {uname} = req.params;
         const url = "https://api.twitter.com/2/users/by?usernames=";
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
         var uusers = await getUser(uname, url, bearerToken);
         
         let data_length = uusers.data.length;
