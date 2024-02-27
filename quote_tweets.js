@@ -27,7 +27,7 @@ const csvWriter = createCsvWriter({
 const tweetId = 20;
 const url = `https://api.twitter.com/2/tweets/${tweetId}/quote_tweets`;
 
-const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+const bearerToken = '';
 
 // this is the ID for @TwitterDev
 const getQuoteTweets = async () => {
@@ -159,7 +159,7 @@ app.get("/quote_tweets/:tid", async(req, res) => {
         const {tid} = req.params;
 
         const url = `https://api.twitter.com/2/tweets/${tid}/quote_tweets`;
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
 
         var uusers = await gettQuoteTweets(url, bearerToken);
 
