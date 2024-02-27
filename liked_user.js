@@ -30,7 +30,7 @@ app.use(express.json());
 
 // const id = "1354143047324299264";
 
-// let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+// let token = '';
 
 // user who have liked a tweet
 // const endpointURL = `https://api.twitter.com/2/tweets/${id}/liking_users`;
@@ -115,7 +115,7 @@ async function getRequest(next_token, token, endpointURL) {
 
 const get_liking_users = async (token, endpointURL) => {
   try {
-    var n_token = "7140dibdnow9c7btw4544b2105sgr3sr3e9wkidxn1sfq"
+    var n_token = ""
     let stopped = false
     var data = [];
 
@@ -148,7 +148,7 @@ app.get("/liking_users/:tid", async(req, res) => {
     
   try {
       const {tid} = req.params;
-      let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+      let token = '';
       const url = `https://api.twitter.com/2/tweets/${tid}/liking_users`;
 
       var uusers = await get_liking_users(token, url);
