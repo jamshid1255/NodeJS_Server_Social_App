@@ -34,8 +34,8 @@ cursor = connection.cursor()
 ''''''''''''''''''''''''''''''''''''''''Teets Collection from Twitter'''''''''''''''''''''''''''''''''''''''
 import tweepy
 
-consumerKey = 'giqxYOWnXosvhkeyzbE4V9ox8'
-consumerSecret = 'hRa3cTkAvr0BfjIcLiJcwvFrF1HeFDPG5dabMyfzcdIaTmvaA3'
+consumerKey = ''
+consumerSecret = ''
 
 authenticate = tweepy.OAuthHandler(consumerKey, consumerSecret)
 api = tweepy.API(authenticate, wait_on_rate_limit= True)
