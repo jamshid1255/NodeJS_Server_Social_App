@@ -3,7 +3,7 @@ const needle = require("needle");
 // To set environment variables on macOS or Linux, run the export command below from the terminal:
 // export BEARER_TOKEN='YOUR-TOKEN'
 
-let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+let token = '';
       
 // You can replace the ID given with the Tweet ID you wish to like.
 // You can find an ID by using the Tweet lookup endpoint
