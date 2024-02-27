@@ -28,8 +28,8 @@ app.use(express.json());
 //   ]
 // });
 
-// let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
-// const token = '7140dibdnow9c7btw423wwmj7yaip007h9hpioql8wgfl';
+// let token = '';
+// const token = '';
 // const id = "2244994945";
 
 
@@ -62,7 +62,7 @@ async function getRequest(next_token, token, endpointURL) {
 
 // (async () => {
 //   try {
-//     var n_token = "7140dibdnow9c7btw423wwn50dihtrzhathqw66brwqb8"
+//     var n_token = ""
 //     let stopped = false
 //     while(!stopped) {
 //       //// Make request
@@ -117,7 +117,7 @@ async function getRequest(next_token, token, endpointURL) {
 
 const get_liking_tweets = async (token, endpointURL) => {
   try {
-    var n_token = "7140dibdnow9c7btw423wwn50dihtrzhathqw66brwqb8"
+    var n_token = ""
     let stopped = false
     var data = [];
 
@@ -150,7 +150,7 @@ app.get("/liking_tweets/:tid", async(req, res) => {
     
   try {
       const {tid} = req.params;
-      let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+      let token = '';
       const url = `https://api.twitter.com/2/users/${tid}/liked_tweets`;
 
       var uusers = await get_liking_tweets(token, url);
