@@ -1,10 +1,10 @@
 
 
 var tokens = {
-    consumer_key: 'giqxYOWnXosvhkeyzbE4V9ox8',
-    consumer_secret: 'hRa3cTkAvr0BfjIcLiJcwvFrF1HeFDPG5dabMyfzcdIaTmvaA3',
-    access_token: '1497087080937451521-i8ZHCk5U4YYp2ejPW6gD5te0mG3tUz',
-    access_token_secret: 'FceNCn84QVvVWcSNLEeemItrK9UYAcUKE29MolJbfIX6k'
+    consumer_key: '',
+    consumer_secret: '',
+    access_token: '',
+    access_token_secret: ''
 };
 
 const express = require("express");
@@ -121,7 +121,7 @@ app.get("/followers/:tid", async(req, res) => {
     try {
         const {tid} = req.params;
         const url = `https://api.twitter.com/2/users/${tid}/followers`;
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
 
         var uusers = await gettFollowers(url, bearerToken);
 
@@ -171,7 +171,7 @@ app.get("/followings/:tid", async(req, res) => {
         const {tid} = req.params;
         // const userId = 2244994945;
         const url = `https://api.twitter.com/2/users/${tid}/following`;
-        const bearerToken = "AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U";
+        const bearerToken = "";
 
         var uusers = await gettFollowing(url, bearerToken);
 
@@ -240,7 +240,7 @@ async function getRequest(next_token, token, endpointURL) {
 const getretweets = async (token, endpointURL) => {
     try {
   
-      var n_token = "7140dibdnow9c7btw4543w41k13jxnpsxeghwd4nu9yy9"
+      var n_token = ""
       let stopped = false
       var data = [];
   
@@ -276,7 +276,7 @@ app.get("/retweets/:tid", async(req, res) => {
   
         const endpointURL = `https://api.twitter.com/2/tweets/${tid}/retweeted_by`;
   
-        const token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const token = '';
         
         var uusers = await getretweets(token, endpointURL);
         let data_length = uusers.length;
@@ -387,7 +387,7 @@ app.get("/quote_tweets/:tid", async(req, res) => {
         const {tid} = req.params;
 
         const url = `https://api.twitter.com/2/tweets/${tid}/quote_tweets`;
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
 
         var uusers = await gettQuoteTweets(url, bearerToken);
 
@@ -427,7 +427,7 @@ app.get("/quote_tweets/:tid", async(req, res) => {
 
 const get_liking_users = async (token, endpointURL) => {
     try {
-      var n_token = "7140dibdnow9c7btw4544b2105sgr3sr3e9wkidxn1sfq"
+      var n_token = ""
       let stopped = false
       var data = [];
   
@@ -487,7 +487,7 @@ const get_liking_users = async (token, endpointURL) => {
     
     try {
         const {tid} = req.params;
-        let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        let token = '';
         const url = `https://api.twitter.com/2/tweets/${tid}/liking_users`;
   
         var uusers = await get_liking_users(token, url);
@@ -538,7 +538,7 @@ const get_liking_users = async (token, endpointURL) => {
 
   const get_liking_tweets = async (token, endpointURL) => {
     try {
-      var n_token = "7140dibdnow9c7btw423wwn50dihtrzhathqw66brwqb8"
+      var n_token = ""
       let stopped = false
       var data = [];
   
@@ -595,7 +595,7 @@ const get_liking_users = async (token, endpointURL) => {
     
     try {
         const {tid} = req.params;
-        let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        let token = '';
         const url = `https://api.twitter.com/2/users/${tid}/liked_tweets`;
   
         var uusers = await get_liking_tweets(token, url);
@@ -697,7 +697,7 @@ async function getRequest_uu(uname, endpointURL, token) {
 
         const {uname} = req.params;
         const url = "https://api.twitter.com/2/users/by?usernames=";
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
         var uusers = await getUser(uname, url, bearerToken);
         
         let data_length = uusers.data.length;
@@ -808,7 +808,7 @@ app.get("/get_tweets/:tid", async(req, res) => {
     try {
         const {tid} = req.params;
         const url = `https://api.twitter.com/2/users/${tid}/tweets`;
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
 
         var uusers = await gettUserTweets(url, bearerToken);
 
@@ -1263,7 +1263,7 @@ app.post("/twitterlogUserInfo", async(req, res) => {
 const get_liking_users_my_tweets = async(token, endpointURL) => {
 console.log('get_liking_users_my_tweets');    
 try {
-        var n_token = "7140dibdnow9c7btw4544b2105sgr3sr3e9wkidxn1sfq"
+        var n_token = ""
         let stopped = false
         var data = [];
 
@@ -1362,7 +1362,7 @@ try {
         var  tid  = personID;
 	 tid = '1265630511415918592';
 	console.log(tid);
-        let token = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        let token = '';
         const url = `https://api.twitter.com/2/tweets/${tid}/liking_users`;
 
         var uusers = await get_liking_users_my_tweets(token, url);
