@@ -33,7 +33,7 @@ app.use(express.json());
 const userId = "2244994945";
 const url = `https://api.twitter.com/2/users/${userId}/tweets`;
 
-const bearerToken = "AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U";
+const bearerToken = "";
 
 // const getUserTweets = async () => {
 //     let userTweets = [];
@@ -171,7 +171,7 @@ app.get("/get_tweets/:tid", async(req, res) => {
     try {
         const {tid} = req.params;
         const url = `https://api.twitter.com/2/users/${tid}/tweets`;
-        const bearerToken = 'AAAAAAAAAAAAAAAAAAAAAK96ZgEAAAAAyUsPg2HSWmAPV813iso8vp1o0W4%3DspiZOVKaSe1i4em9hvXRSXyGslJ0Y2mGwR0Kp4PziirEhFwf7U';
+        const bearerToken = '';
 
         var uusers = await gettUserTweets(url, bearerToken);
 
